@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Esther Silva">
+    <title>Troca de imagens 📸</title>
+</head>
+<body>
+    <style>
+        body{
+            color:rgb(126, 92, 6);
+            background-color: rgb(251, 233, 132);
+            text-align: center; 
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <h1>Papel de parede de alguns dos meus desenhos favoritos na infância!</h1>
+    <p>Clique no botão para ver:</p>
+    <img style="width: 250px;" src="desenho0.jpg" alt="desenho">
+    <button id="troca">MOVE</button>
+
+    <script src="script.js">
+document.addEventListener('DOMContentLoaded', function() {
+        let button = document.getElementById('troca');
+        let image = document.querySelector('img');
+        let imageIndex = 0;
+        let images = ['desenho0.jpg', 'desenho1.jpg', 'desenho2.jpg', 'desenho3.jpg', 'desenho4.jpg', 'desenho5.jpg', 'desenho6.jpg'];
+
+        button.addEventListener('click', function() {
+            image.src = images[imageIndex];
+            imageIndex = (imageIndex + 1) % images.length; 
+        });
+    });
+    </script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
